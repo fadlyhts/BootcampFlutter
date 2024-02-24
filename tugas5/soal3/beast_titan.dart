@@ -1,0 +1,7 @@
+import 'titan.dart';
+
+class BeastTitan extends Titan {
+  String lempar() => "wush wush..";
+
+  BeastTitan(double powerPoint) : super(powerPoint);
+}
