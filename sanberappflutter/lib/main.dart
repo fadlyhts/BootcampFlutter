@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sanberappflutter/tugas/tugas9/Telegram.dart';
+import 'package:sanberappflutter/tugas/tugas10/LoginScreen.dart';
+import 'package:sanberappflutter/tugas/tugas10/HomeScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Telegram(),
+      home: LoginScreen(),
+      routes: <String, WidgetBuilder>{
+        '/homescreen': (BuildContext context) => HomeScreen(), // Define the home page route
+      },
     );
   }
 }
