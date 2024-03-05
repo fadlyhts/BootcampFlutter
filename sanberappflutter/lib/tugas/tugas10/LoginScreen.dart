@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:sanberappflutter/tugas/tugas10/HomeScreen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -35,6 +38,7 @@ class LoginScreen extends StatelessWidget {
               Container(
 	            padding :EdgeInsets.all(10),
 	                child: TextField(
+                    obscureText: true,
 	                decoration: InputDecoration(
 		              border: OutlineInputBorder(),
 	                labelText: "Password"
@@ -53,13 +57,20 @@ class LoginScreen extends StatelessWidget {
                   child: Text('Forgot Password'),
                 ),
               ),
-              SizedBox(height: 20),
-              ElevatedButton(
+              SizedBox(
+              width: 200.0,
+              height: 50.0,
+              child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/homescreen');
+                  Route route = MaterialPageRoute(builder: (context) => HomeScreen());
+                  Navigator.push(context, route);
                   // Implement login logic
                 },
-                child: Text('Login'),
+                child: Text(
+                  'Login',
+                  ),
+                
+              )
               ),
               SizedBox(height: 10),
               Row(
