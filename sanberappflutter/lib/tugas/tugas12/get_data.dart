@@ -41,68 +41,57 @@ class _GetDataScreenState extends State<GetDataScreen> {
         title: Text('Get data api reqres'),
       ),
       body: RefreshIndicator(
-        onRefresh: _fetchData,
+        onRefresh: _getRefreshData,
         child: data == null
-        ? Center(child : CircularProgressIndicator()
-        : ListView.builder()
-          future: data,
-          builder:
-              (BuildContext context, AsyncSnapshot<List<Data>> snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              print(snapshot.error);
-              return Center(child: Text('Error'));
-            } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return Center(child: Text('Empty Data'));
-            } else {
-              return ListView.builder(
-                itemCount:
-                    snapshot.data == null ? 0 : snapshot.data!.length,
+        ? Center(child : CircularProgressIndicator())
+        : ListView.builder(
+                itemCount: data == null ? 0 : data!.length,
                 itemBuilder:
-                    (BuildContext context, int index) => Padding(
-                  padding:
-                      EdgeInsets.all(16.0),
-                  child: Column(
-                    children:[
-                      GestureDetector(
-                        onTapUp:(e){
-                          Navigator.push(context,
-                            MaterialPageRoute(builder:(context)=>DetailUserDataScreen(data:snapshot.data![index])),
-                          );
-                        },
-                        child : Padding (
-                          padding : EdgeInsets.all(16.0),
-                          child : Row (
-                            children:[
-                              ClipRRect (
-                                borderRadius : BorderRadius.circular(100),
-                                child : Image.network (
-                                  snapshot.data![index]['avatar'],
-                                  height :80,
-                                  width :80,
-                                ),
-                              ),
-                              SizedBox(width: 16.0),
-                              Text(
-                                snapshot.data![index]['first_name'] + ' ' + snapshot.data![index]['last_name'],
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                    (BuildContext context, int index) {
+                      return Container(
+                          padding: EdgeInsets.all(5.0),
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => GetDetailDataScreen(
+                                        value: data![index]["id"])),
+                                    );
+                                  print(data![index]["id"]);
+
+                                },
+                                child: Padding(
+                                  padding: EdgeInsets.all(16.0),
+                                  child: Row(
+                                    children: [
+                                      ClipRRect(
+                                        child: Image.network(
+                                          data![index]["avatar"],
+                                          height:80,
+                                          width: 80,
+                                        ),
+                                      ),
+                                      SizedBox(width: 10),
+                                      Column(
+                                        children: [
+                                          Text(data![index]["first_name"] +
+                                           " " +
+                                           data![index]["last_name"]),
+                                           Text(data![index]["email"]),
+                                        ],
+                                      )
                             ],
                           ),
-                        ),
                       ),
-                    ],
-                  ),
-                ),
-              );
-            }
-          },
         ),
-      ),
+        Divider()
+        ],
+        ),
     );
-  }
+
+  })));
+}
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sanberappflutter/tugas/tugas9/Telegram.dart';
-import 'package:sanberappflutter/tugas/tugas10/LoginScreen.dart';
-import 'package:sanberappflutter/tugas/tugas10/HomeScreen.dart';
+import 'package:sanberappflutter/tugas/tugas12/get_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
-      routes: <String, WidgetBuilder>{
-        '/homescreen': (BuildContext context) => HomeScreen(), // Define the home page route
-      },
+      home: GetDataScreen(),
     );
   }
 }
