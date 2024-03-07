@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1035592666332",
+    "project_id": "fadlyprojekapp",
+    "storage_bucket": "fadlyprojekapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035592666332:android:3439f3419ee26fa1ae3819",
+        "android_client_info": {
+          "package_name": "com.example.fadlyprojekapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBufW1EWjCAUbmNAO7Noq7FK9sFEyqn9KU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394290777611",
+    "project_id": "fadly-auth",
+    "storage_bucket": "fadly-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394290777611:android:064f70a285954d60ab410e",
+        "android_client_info": {
+          "package_name": "com.example.sanberappflutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa5ROdsAyjCP7X-UUzqWrCev6gkEIpRwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBPS_l2PowUhwO5gX9-9XQhfyQ3b4216_w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>394290777611</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.sanberappflutter.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>fadly-auth</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fadly-auth.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:394290777611:ios:b7d0934026488fbfab410e</string>
+</dict>
+</plist>
