@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:fadlyprojekapp/Authentication/LoginScreen.dart';
+import 'package:fadlyprojekapp/State/get_data_screen.dart';
 
 
 Future<void> main() async {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: GetDataScreenStateManagement(),
     );
       
   }
